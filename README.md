@@ -44,6 +44,12 @@ The Iris dataset continues to serve as a foundational resource in the fields of 
 
 ## Dependencies 🌸
 
+  - Python==3.12.7  
+  - Matplotlib  
+  - seaborn  
+  - pandas  
+  - NumPy  
+
 ## Environment Setup 🌸
 
 ## How to Download Repository 🌸
