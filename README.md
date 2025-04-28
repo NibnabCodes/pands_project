@@ -1,6 +1,6 @@
 # Programming & Scripting Project 2025
 
-## *Investigating the Iris Dataset*
+## *Investigating the Iris Dataset* 🌱
 
 ![Alt text](images/iris-species.png)
 
@@ -11,7 +11,7 @@ This repository contains an introductory investigation into the iris dataset com
 
 As a beginner to both programming and data analytics, the primary aim of this project was to build foundational skills in data analytics using Python, by preforming an investigation into the iris dataset.
 
-The analysis begins with exploratory data analysis (EDA) to examine the structure and statistical properties of the dataset. Visualizations are employed to illustrate patterns, relationships, and class distributions within the data. Finally, simple machine learning algorithms are implemented to classify iris species based on the dataset’s features.
+I began my analysis with exploratory data analysis (EDA) to examine the structure, health and statistical properties of the dataset.
 
 Through this project, I have gained practical experience in working with real-world data, using tools and libraries such as pandas, matplotlib, seaborn, and scikit-learn. The work reflects a progression in my understanding of core data analytics concepts and programming practices.
 
@@ -21,6 +21,7 @@ Author: Niamh Hogan
 
 This repository is comprised of the following files and folders:
 
+* A **.gitignore** file which contains all the files/folders to be ignored by Git in the repository.
 * A **README** file containing a brief summary of the iris dataset, 
 * An **images** folder containing .png files of
 * A Jupyter Notebook titled: **investigations.ipynb**  
@@ -30,7 +31,7 @@ This repository is comprised of the following files and folders:
 
 ## Summary of the Iris Dataset 🌸
 
-The Iris dataset is a well-known multivariate dataset comprising 150 observations, evenly distributed across three species of the Iris flower: Iris setosa, Iris versicolor, and Iris virginica, with 50 instances representing each class. Each sample is described by four continuous numerical features: sepal length, sepal width, petal length, and petal width, all measured in centimeters, thereby ensuring consistency in measurement units. ([GeeksforGeeks, 2024](https://www.geeksforgeeks.org/iris-dataset/))
+The Iris dataset is a well-known multivariate dataset comprising 150 observations, evenly distributed across three species of the Iris flower: Setosa, Versicolor, and Virginica, with 50 instances representing each class. Each sample is described by four continuous numerical features: sepal length, sepal width, petal length, and petal width, all measured in centimeters, thereby ensuring consistency in measurement units. ([GeeksforGeeks, 2024](https://www.geeksforgeeks.org/iris-dataset/))
 
 In 1936, Ronald Fisher introduced the Iris dataset in his paper *The Use of Multiple Measurements in Taxonomic Problems*, aiming to demonstrate the application of statistical techniques to classification challenges. Fisher posited that distinct morphological characteristics among Iris species, specifically measurements of sepal and petal length and width, could be leveraged to infer species membership. Utilizing a combination of these four features, he formulated a linear discriminant analysis (LDA) model capable of differentiating among the species. Furthermore, he suggested that the species of an unclassified iris flower could be predicted using the statistical patterns derived from the dataset. ([Fisher, 1936](https://www.semanticscholar.org/paper/THE-USE-OF-MULTIPLE-MEASUREMENTS-IN-TAXONOMIC-Fisher/ab21376e43ac90a4eafd14f0f02a0c87502b6bbf))
 
@@ -40,7 +41,7 @@ The Iris dataset continues to serve as a foundational resource in the fields of 
 
   - All four features — sepal length, sepal width, petal length, and petal width are measured in consistent units (centimeters), ensuring standardization in data representation.
 
-  - The Iris setosa species is linearly separable from the other two species, facilitating clear differentiation. Although Iris versicolor and Iris virginica exhibit some degree of overlap, they can still be effectively distinguished using specific feature combinations. This inherent structure makes the dataset particularly suited for introductory studies in classification and highlights its substantial predictive capabilities.
+  - The Iris setosa species is linearly separable from the other two species, facilitating clear differentiation. Versicolor and Virginica exhibit some degree of overlap. However, they can still be effectively distinguished using specific feature combinations. This inherent structure makes the dataset particularly suited for introductory studies in classification and highlights its substantial predictive capabilities.
 
 ## Dependencies 🌸
 
