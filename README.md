@@ -46,10 +46,11 @@ The Iris dataset continues to serve as a foundational resource in the fields of 
 ## Dependencies 🌸
 
   - Python==3.12.7  
-  - Matplotlib  
-  - seaborn  
-  - pandas  
-  - NumPy  
+  - Matplotlib.pyplot==3.9.2 
+  - seaborn==0.13.2  
+  - pandas==2.2.2
+  - NumPy==1.26.4
+  - scikit-learn==1.5.1
 
 ## Environment Setup 🌸
 
@@ -60,8 +61,10 @@ The Iris dataset continues to serve as a foundational resource in the fields of 
 
 ## References 🌸
 
-Brownlee, (2016) https://machinelearningmastery.com/machine-learning-in-python-step-by-step/  
+*See **investigations.ipynb** for references used to complete project*
 
-Fisher, R.A. (1936). THE USE OF MULTIPLE MEASUREMENTS IN TAXONOMIC PROBLEMS. Annals of Human Genetics, 7, 179-188.
+Brownlee, J. (2016). Machine learning in Python: Step-by-step tutorial. Machine Learning Mastery. https://machinelearningmastery.com/machine-learning-in-python-step-by-step/
+
+Fisher, R. A. (1936). The use of multiple measurements in taxonomic problems. Annals of Human Genetics, 7(2), 179–188. https://doi.org/10.1111/j.1469-1809.1936.tb02137.x
 
 GeeksforGeeks. (2024). Iris dataset. GeeksforGeeks. https://www.geeksforgeeks.org/iris-dataset/
