@@ -43,3 +43,11 @@ print(iris_df.describe())
 # Save summary as .txt file
 with open('iris_summary.txt', 'w') as file:
     file.write(iris_df.describe().to_string())
+
+# Create histograms for each feature
+iris_df.hist(color='green', figsize = (8, 6))
+plt.show()
+
+# Create boxplot of each feature
+sns.boxplot(data=iris_df, orient='v', palette='Set3')
+plt.show()
