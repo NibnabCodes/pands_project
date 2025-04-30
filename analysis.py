@@ -21,13 +21,6 @@ print(iris.species.unique())
 # View data types
 print(iris.dtypes)
 
-# Generate descriptive statistics summary of dataset
-print(iris.describe())
-
-# Save summary as .txt file
-with open('iris_summary.txt', 'w') as file:
-    file.write(iris.describe().to_string())
-
 # Check for missing values
 print(iris.isnull().sum())
 
@@ -37,6 +30,16 @@ print(iris.duplicated().sum())
 # View duplicated rows
 print(iris[iris.duplicated()])
 
+# Drop duplicates
+iris_df = iris.drop_duplicates()
+
 # Check for balance in the target variable
-sns.countplot(x ='species', hue = "species", data = iris)
+sns.countplot(x ='species', hue = "species", data = iris_df)
 plt.show()
+
+# Generate descriptive statistics summary of dataset
+print(iris_df.describe())
+
+# Save summary as .txt file
+with open('iris_summary.txt', 'w') as file:
+    file.write(iris_df.describe().to_string())
