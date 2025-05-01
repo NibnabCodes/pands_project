@@ -44,10 +44,34 @@ print(iris_df.describe())
 with open('iris_summary.txt', 'w') as file:
     file.write(iris_df.describe().to_string())
 
-# Create histograms for each feature
-iris_df.hist(color='green', figsize = (8, 6))
+# Create subplots
+fig, ax = plt.subplots(2, 2, figsize=(8, 6))
+
+# Create histogram for sepal length
+ax[0,0].hist(iris_df['sepal_length'], bins=6, color='green', edgecolor='black')
+# Set the figure title
+ax[0,0].set_title("Sepal Length")
+
+# Create histogram for sepal width
+ax[0,1].hist(iris_df['sepal_width'], bins=5, color='red', edgecolor='black')
+# Set the figure title
+ax[0,1].set_title("Sepal Width")
+
+# Create histogram for petal length
+ax[1,0].hist(iris_df['petal_length'], bins=6, color='blue', edgecolor='black')
+# Set the figure title
+ax[1,0].set_title("Petal Length")
+
+# Create histogram for petal width
+ax[1,1].hist(iris_df['petal_width'], bins=6, color='purple', edgecolor='black')
+# Set the figure title
+ax[1,1].set_title("Petal Width")
+
+# Adjust layout to prevent overlap
+plt.tight_layout()
 plt.show()
 
 # Create boxplot of each feature
 sns.boxplot(data=iris_df, orient='v', palette='Set3')
 plt.show()
+
