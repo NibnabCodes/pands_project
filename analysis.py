@@ -75,3 +75,31 @@ plt.show()
 sns.boxplot(data=iris_df, orient='v', palette='Set3')
 plt.show()
 
+# Create subplots
+fig, axes = plt.subplots(2, 2, figsize=(10, 10))
+
+# Add subplot title
+fig.suptitle("Iris Feature Distribution by Species", fontsize=16)
+
+# Create violin plots for each feature & add titles
+sns.violinplot(x='species', y='sepal_length', data=iris, ax=axes[0, 0], hue='species', palette="husl")
+axes[0, 0].set_ylabel("Frequency")
+axes[0, 0].set_title("Sepal Length by Species")
+
+sns.violinplot(x='species', y='sepal_width', data=iris, ax=axes[0, 1], hue='species', palette="husl")
+axes[0, 1].set_ylabel("Frequency")
+axes[0, 1].set_title("Sepal Width by Species")
+
+sns.violinplot(x='species', y='petal_length', data=iris, ax=axes[1, 0], hue='species', palette="husl")
+axes[1, 0].set_ylabel("Frequency")
+axes[1, 0].set_title("Petal Length by Species")
+
+sns.violinplot(x='species', y='petal_width', data=iris, ax=axes[1, 1], hue='species', palette="husl")
+axes[1, 1].set_ylabel("Frequency")
+axes[1, 1].set_title("Petal Width by Species")
+
+# Adjust layout
+plt.tight_layout()
+plt.show()
+plt.savefig('species_violin_plots.png')
+
