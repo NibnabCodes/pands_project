@@ -13,6 +13,8 @@ As a beginner to both programming and data analytics, the primary aim of this pr
 
 I began my analysis with exploratory data analysis (EDA) to examine the structure, health and statistical properties of the dataset.
 
+--
+
 Through this project, I have gained practical experience in working with real-world data, using tools and libraries such as pandas, matplotlib, seaborn, and scikit-learn. The work reflects a progression in my understanding of core data analytics concepts and programming practices.
 
 Author: Niamh Hogan
@@ -45,18 +47,75 @@ The Iris dataset continues to serve as a foundational resource in the fields of 
 
 ## Dependencies 🌸
 
-  - Python==3.12.7  
-  - Matplotlib.pyplot==3.9.2 
-  - seaborn==0.13.2  
-  - pandas==2.2.2
-  - NumPy==1.26.4
-  - scikit-learn==1.5.1
+**See tasks.ipynb for further information on the following libraries** 
+- Python==3.12.7  
+- Matplotlib.pyplot==3.9.2 
+- seaborn==0.13.2  
+- pandas==2.2.2
+- NumPy==1.26.4
+- scikit-learn==1.5.1
 
-## Environment Setup 🌸
+## Technologies 🌸  
+- Python
+- Anaconda
+- Git
+- GitHub
+- Jupyter Notebooks
+- Visual Studio Code
 
-## How to Download Repository 🌸
+## Environment Setup 🌸  
 
-## How to Run the Project 🌸
+For downloading and running the repository locally download the following:
+
+**Git**
+
+Download the latest version of Git at:
+https://git-scm.com/downloads
+
+**GitHub**
+
+Create a free GitHub account at:
+https://github.com/signup?ref_cta=Sign+up&ref_loc=header+logged+out&ref_page=%2F&source=header-home
+
+**Anaconda**
+
+I recommend using Anaconda as it comes bundled with Python, Jupyter Notebooks & the Python libraries used in this repository.
+Install Anaconda using the following steps:
+
+  1. Download Anaconda for free from:  
+  https://www.anaconda.com/download  
+  2. Open the downloaded file & press next, next
+  3. When the advanced options appear check the following boxes:
+  - Add to PATH environment variable
+  - Make this version your default Python
+
+**Visual Studio Code**
+
+Download Visual Studio Code at:  
+https://code.visualstudio.com/Download
+
+  - Install Python & Jupyter extensions in VS Code
+
+## How to Download Repository 🌸  
+
+You can clone this repository to VS Code using the following steps:
+
+  1. Copy the repositories URL from GitHub:  
+  https://github.com/NibnabCodes/pands_project
+  2. Create a folder in VS Code of where you want to store the cloned repository
+  3. Open new terminal in VS Code & input following:
+  - git clone PASTED.URL - To clone repository
+  - git config pull.rebase false - Set pull mode to merge
+  - git pull - To pull the content of the repository
+
+The repository should now be accessible in VS Code & ready to execute.
+
+## How to Run the Project 🌸  
+  1. Open repository folder in VS Code
+  2. Open .ipynb file
+  3. In the top right-hand corner click "select kernel"
+  4. select Python environment
+  5. To execute the cells to run the code within the notebook, select "Run All" or run the cells one by one by clicking "▶️ Execute cell" on the top left-hand corner of the cell
 
 
 ## References 🌸
