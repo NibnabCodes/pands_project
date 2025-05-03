@@ -103,4 +103,18 @@ plt.tight_layout()
 plt.savefig('iris_violinplots.png')
 plt.show()
 
+# load iris dataset
+# from seaborn online library
+df = sns.load_dataset('iris')
 
+# Create pairplot of the dataset
+df = sns.pairplot(df, hue='species', palette='husl')
+
+# Adjust position of title higher
+# to prevent it from obstructing
+# the plots
+df.figure.subplots_adjust(top=.9)
+
+# Add title
+df.figure.suptitle("Pairplot of Iris Dataset", fontsize=16)
+plt.show()
