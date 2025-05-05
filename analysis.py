@@ -1,6 +1,8 @@
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
+import sklearn as skl
+from sklearn.datasets import load_iris
 
 # Import the dataset via .csv file,
 # & read through pandas
@@ -75,6 +77,38 @@ plt.show()
 sns.boxplot(data=iris_df, orient='v', palette='Set3')
 plt.show()
 
+# Load from sklearn
+iris = load_iris()
+# Convert to DataFrame & extract features
+df = pd.DataFrame(iris.data, columns=iris.feature_names)
+
+# Compute correlation matrix
+corr_matrix = df.corr()
+
+# Display
+print(corr_matrix)
+
+# Create figure, axis & subplots
+fig, ax = plt.subplots(figsize=(8, 6))
+
+# Plot & Display heatmap with customised colours
+cax = ax.imshow(corr_matrix, cmap='PiYG')
+
+# Add color bar
+fig.colorbar(cax)
+
+# Set feature names as labels
+ax.set_xticks(range(len(df.columns)), labels=df.columns,
+              rotation=45, ha="right", rotation_mode="anchor")
+ax.set_yticks(range(len(df.columns)), labels=df.columns)
+
+# Add grid lines
+plt.grid()
+
+# Display title
+plt.title("Correlation Heatmap of Iris Features", fontsize=16)
+plt.show()
+
 # Create subplots
 fig, axes = plt.subplots(2, 2, figsize=(10, 10))
 
@@ -82,25 +116,24 @@ fig, axes = plt.subplots(2, 2, figsize=(10, 10))
 fig.suptitle("Iris Feature Distribution by Species", fontsize=16)
 
 # Create violin plots for each feature & add titles
-sns.violinplot(x='species', y='sepal_length', data=iris, ax=axes[0, 0], hue='species', palette="husl")
+sns.violinplot(x='species', y='sepal_length', data=iris_df, ax=axes[0, 0], hue='species', palette="husl")
 axes[0, 0].set_ylabel("Frequency")
 axes[0, 0].set_title("Sepal Length by Species")
 
-sns.violinplot(x='species', y='sepal_width', data=iris, ax=axes[0, 1], hue='species', palette="husl")
+sns.violinplot(x='species', y='sepal_width', data=iris_df, ax=axes[0, 1], hue='species', palette="husl")
 axes[0, 1].set_ylabel("Frequency")
 axes[0, 1].set_title("Sepal Width by Species")
 
-sns.violinplot(x='species', y='petal_length', data=iris, ax=axes[1, 0], hue='species', palette="husl")
+sns.violinplot(x='species', y='petal_length', data=iris_df, ax=axes[1, 0], hue='species', palette="husl")
 axes[1, 0].set_ylabel("Frequency")
 axes[1, 0].set_title("Petal Length by Species")
 
-sns.violinplot(x='species', y='petal_width', data=iris, ax=axes[1, 1], hue='species', palette="husl")
+sns.violinplot(x='species', y='petal_width', data=iris_df, ax=axes[1, 1], hue='species', palette="husl")
 axes[1, 1].set_ylabel("Frequency")
 axes[1, 1].set_title("Petal Width by Species")
 
 # Adjust layout
 plt.tight_layout()
-plt.savefig('iris_violinplots.png')
 plt.show()
 
 # load iris dataset
