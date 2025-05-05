@@ -1,11 +1,12 @@
 # Programming & Scripting Project 2025
 
-## *Investigating the Iris Dataset* 🌱
+## *Investigating the Iris Dataset* 
 
 ![Alt text](images/iris-species.png)
 
 
-## Overview 🌸
+## Overview 🌱
+
 
 This repository contains an introductory investigation into the iris dataset completed as part of the assessment requirements for the *Programming and Scripting* module at Atlantic Technological University – Galway.
 
