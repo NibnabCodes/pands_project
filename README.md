@@ -25,11 +25,14 @@ Author: Niamh Hogan
 This repository is comprised of the following files and folders:
 
 * A **.gitignore** file which contains all the files/folders to be ignored by Git in the repository.
-* A **README** file containing a brief summary of the iris dataset, 
-* An **images** folder containing .png files of
+* An **images** folder containing  
+* An **analysis.py** file which includes only the code. 
+* A **feature_corr_matrix.txt** file
 * A Jupyter Notebook titled: **investigations.ipynb**  
-  - briefly discuss sections
-* An **analysis.py** file which includes only the code.
+* An **iris_summary.txt** file
+* A **iris.csv** file  
+* A **README** file containing an overview, brief summary of the iris dataset,  
+* A **requirements.txt** 
 
 
 ## Summary of the Iris Dataset 🌸
@@ -53,8 +56,12 @@ The Iris dataset continues to serve as a foundational resource in the fields of 
 - Matplotlib.pyplot==3.9.2 
 - seaborn==0.13.2  
 - pandas==2.2.2
-- NumPy==1.26.4
-- scikit-learn==1.5.1
+- scikit-learn==1.5.1  
+- from sklearn.datasets import load_iris==1.5.1  
+- from sklearn.model_selection import train_test_split==1.5.1  
+- from sklearn.linear_model import LogisticRegression==1.5.1  
+- from sklearn.metrics import accuracy_score, classification_report, confusion_matrix==1.5.1  
+- from sklearn.model_selection import cross_val_score, cross_val_predict==1.5.1  
 
 ## Technologies 🌸  
 - Python

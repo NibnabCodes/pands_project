@@ -3,6 +3,11 @@ import seaborn as sns
 import matplotlib.pyplot as plt
 import sklearn as skl
 from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from sklearn.model_selection import cross_val_score, cross_val_predict
+
 
 # Import the dataset via .csv file,
 # & read through pandas
@@ -151,3 +156,43 @@ df.figure.subplots_adjust(top=.9)
 # Add title
 df.figure.suptitle("Pairplot of Iris Dataset", fontsize=16)
 plt.show()
+
+# Load features and target from sklearn
+X = iris.data  # Features (sepal & petal measurements)
+y = iris.target  # class labels (species)
+
+# Split the dataset - training & test sets
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+# Create a Logistic Regression model
+# & store it in variable
+model = LogisticRegression(solver='lbfgs', max_iter=200)
+# Fit the model to the training data
+model.fit(X_train, y_train)
+
+# Make predictions on unseen data (test set)
+# & store in variable
+y_pred = model.predict(X_test)
+
+# Generate accuracy score of the model
+accuracy = accuracy_score(y_test, y_pred)
+
+# Print accuracy score
+print(f"Accuracy: {accuracy:.2f}")
+
+# Generate & print classification report
+print(classification_report(y_test, y_pred, target_names=iris.target_names))
+
+# Generate & print confusion matrix
+print(confusion_matrix(y_test, y_pred))
+
+# Evaluate & predict model with 5-fold cross-validation
+cv_scores = cross_val_score(model, X, y, cv=5)
+print("Cross-validation scores:", cv_scores)
+print("Mean cross-validation score:", cv_scores.mean().round(2))
+
+# Predict labels using 5-fold cross-validation
+predicted_labels = cross_val_predict(model, X, y, cv=5)
+
+# Print the cross-val confusion matrix
+print(confusion_matrix(y, predicted_labels))
