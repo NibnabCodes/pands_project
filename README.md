@@ -12,9 +12,9 @@ This repository contains an introductory investigation into the iris dataset com
 
 As a beginner to both programming and data analytics, the primary aim of this project was to build foundational skills in data analytics using Python, by preforming an investigation into the iris dataset.
 
-I began my analysis with exploratory data analysis (EDA) to examine the structure, health and statistical properties of the dataset.
+I began my analysis with exploratory data analysis (EDA) to examine the structure, health, distributions, correlations and statistical properties of the dataset.
 
---
+I then applied a Multinomial Logistic Regression Classification Model to the dataset to investigate how well the features could be used to predict their species.
 
 Through this project, I have gained practical experience in working with real-world data, using tools and libraries such as pandas, matplotlib, seaborn, and scikit-learn. The work reflects a progression in my understanding of core data analytics concepts and programming practices.
 
@@ -25,14 +25,14 @@ Author: Niamh Hogan
 This repository is comprised of the following files and folders:
 
 * A **.gitignore** file which contains all the files/folders to be ignored by Git in the repository.
-* An **images** folder containing  
+* An **images** folder containing the 6 generated plots & an *iris-species.png* file that contains a picture of the iris species.
 * An **analysis.py** file which includes only the code. 
-* A **feature_corr_matrix.txt** file
-* A Jupyter Notebook titled: **investigations.ipynb**  
-* An **iris_summary.txt** file
-* A **iris.csv** file  
-* A **README** file containing an overview, brief summary of the iris dataset,  
-* A **requirements.txt** 
+* A **feature_corr_matrix.txt** file that displays the feature correlation matrix.
+* A Jupyter Notebook titled: **investigations.ipynb** containing the code, overcommenting, descriptions and sources used. 
+* An **iris_summary.txt** file displaying the descriptive statistics summary of the dataset.
+* An **iris.csv** file containing the dataset.
+* A **README** file containing an overview, brief summary of the iris dataset, list of dependencies & technologies, how to: set up environment, download the repository & run the project.
+* A **requirements.txt** file containing all the Python packages that the programs depend on & their versions.
 
 
 ## Summary of the Iris Dataset 🌸
