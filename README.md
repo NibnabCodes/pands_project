@@ -1,6 +1,6 @@
 # Programming & Scripting Project 2025
 
-## *Investigating the Iris Dataset* 
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&pause=1000&color=AB67F0&width=435&lines=Investigating+the+Iris+Dataset)](https://git.io/typing-svg)
 
 ![Alt text](images/iris-species.png)
 
